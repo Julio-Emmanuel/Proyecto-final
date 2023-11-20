@@ -1,2 +1,3 @@
 # Proyecto-final
-Proyecto de mi materia ingenieria en computacion :3
+Julio Vega
+Grupo: 1158
