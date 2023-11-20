@@ -15,6 +15,13 @@ int main() {
     cout << "5. cerrar el juego" << endl;
     cout << "\nElige una opción: ";
     cin>>opcion;
+    if (opcion == 2)
+    {
+        dinero = 9999;
+        cout<<"felicidades ahora tienes dinero infinito, ahora puedes comenzar a jugar"<<endl;
+        opcion = 1;
+    }
+    
     switch(opcion){
         case 1:
 
@@ -39,14 +46,16 @@ int main() {
             cout<<"felicidades adrentro habia $50 ahora ya tienes dienero"<<endl;
             dinero += 50;
             cout<<"fueron añadidos 50 pesos a tu economia"<<endl;
-            break;    
+            break;
+        }         
+
         
             
             
 
                 
 
-        }
+        
         do{
                 cout<< "acabas de entrar a tu clase de algebra y la profesora les dice que tiene hambre, así que les da la clase, ¿a donde queires ir ahora?";
                 cout << "\n--- Economía ---" << endl;
@@ -60,10 +69,11 @@ int main() {
                 if (opcion < 1 || opcion > 3){
                     cout<<"ingresa un numero del 1 al 3"<<endl;
                 }
-            }while(opcion<1||opcion>3);
+        }while(opcion<1||opcion>3);
+       
         
-        
-    }   
+            
+    }
     return 0;
 }
     
