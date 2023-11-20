@@ -48,6 +48,14 @@ int main() {
                 cout<<"fueron añadidos 50 pesos a tu economia"<<endl;
                 break;
             case 2:
+                cout<<"le avisaste a la chica que se le cayó su monedero y ella está muy agradecida contigo"<<endl<<"felicidades ahora tienes novia y parece que son tal para cual"<<endl;
+                break;
+            case 3:
+    
+                cout<<"pobre chica, no te hubiera costado nada avisarle, sigues caminando";
+                break;
+
+    
             
         }         
 
@@ -80,6 +88,17 @@ int main() {
                 }
                     
             }
+            if (opcion == 2)
+            {
+               if (dinero < 50)
+               {
+                    cout<<"no tienes suficiente dinero para comprar comida escoge otra opción"<<endl;
+                    opcion = 9;
+               }
+               
+            }
+            
+
 
         }while(opcion<1||opcion>3);    
         switch (opcion)
@@ -87,6 +106,13 @@ int main() {
         case 1:
             cout<<"fuiste con tus amigos al billar y te divertiste mucho definitivamente esto es algo que extrañaras del semestre, ojalá la vida fuera así siempre"<<endl;
             dinero -= 40;
+            break;
+        case 2:
+            cout<<"que bueno que fuiste a comer algo, ya tenias mucha hambre seguro que así resolveras mejor tu proximo examen"<<endl;
+            dinero -= 50;
+            break;
+        case 3:
+            cout<<"tienes hambre y estas aburrido, tal vez pudiste invertir mejor tu tiempo"<<endl;
             break;
             
         }
@@ -109,7 +135,7 @@ int main() {
         
 
         }
-        do{//desicion 4
+        do{//decision 4
 
         
             cout<<"ya es hora del examen final con el profesor Jorge Candelario va a estar difisilisimo, preparate"<<endl;
