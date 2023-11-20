@@ -43,10 +43,10 @@ int main() {
         }while(opcion<1||opcion>3);
         switch(opcion){
             case 1:
-            cout<<"felicidades adrentro habia $50 ahora ya tienes dienero"<<endl;
-            dinero += 50;
-            cout<<"fueron añadidos 50 pesos a tu economia"<<endl;
-            break;
+                cout<<"felicidades adrentro habia $50 ahora ya tienes dienero"<<endl;
+                dinero += 50;
+                cout<<"fueron añadidos 50 pesos a tu economia"<<endl;
+                break;
             case 2:
             
         }         
@@ -65,7 +65,7 @@ int main() {
             cout << "\n--- Menú de Interacción ---" << endl;
             cout << "1. ir con tus amigos al billar -40 pesos" << endl;
             cout << "2. ir a comer algo -50 pesos" << endl;
-            cout << "3.  " << endl;
+            cout << "3. salir a dar una vuelta por la fes " << endl;
             cout << "\nElige una opción: ";
             cin>>opcion;
             if (opcion < 1 || opcion > 3){
@@ -91,7 +91,7 @@ int main() {
             
         }
         do{//desicion 3
-            cout<<"tu amigo Emmanuel te pide ayuda para estudiar para uno de sus examenes"<<endl;
+            cout<<" vas caminando en la explanada de la fes y tu amigo Emmanuel te pide ayuda para estudiar para uno de sus examenes"<<endl;
             cout << "\n--- Economía ---" << endl;
             cout << "Dinero: " << dinero << endl; 
             cout << "\n--- Menú de Interacción ---" << endl;
@@ -100,8 +100,40 @@ int main() {
             cout << "3. ignorarlo " << endl;
             cout << "\nElige una opción: ";
         }while(opcion<1||opcion>3);
+        switch (opcion)
+        {
+        case 1:
+            cout<<"tu y tu amigo emmanuel estudiaron mucho, seguro los dos pasaran sus examenes y siguen siendo muy buenos amigos"<<endl;
+        
+            break;
+        
+
+        }
+        do{//desicion 4
 
         
+            cout<<"ya es hora del examen final con el profesor Jorge Candelario va a estar difisilisimo, preparate"<<endl;
+         cout<<"¡oh no! el examen es programr toda la base de datos de la nasa en una cuartilla ¿qué vas a hacer?"<<endl;
+            cout << "\n--- Economía ---" << endl;
+            cout << "Dinero: " << dinero << endl; 
+            cout << "\n--- Menú de Interacción ---" << endl;
+            cout << "1. contestarlo " << endl;
+            cout << "2. copiarle a Emmanuel que está al lado tuyo" << endl;
+            cout << "3. " << endl;
+            cout << "\nElige una opción: ";
+            if (opcion < 1 || opcion > 3){
+                cout<<"ingresa un numero del 1 al 3"<<endl;
+            }
+        }while(opcion<1||opcion>3);
+        switch (opcion)
+        {
+        case 1:
+            cout<<"lo hiciste muy bien el profesor candelario está orgulloso de ti y te invito a comer una picza otro día bien hecho"<<endl;
+            break;
+        
+        default:
+            break;
+        }
 
        
         
