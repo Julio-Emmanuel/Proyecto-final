@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int opcion;
     int dinero = 0; //variable para el dinero del usuario
-    char eleccion;
+    int novia = 0; //variable para final alternativo con novia
 
     cout<<"bienvenido a mi juego de decisiones en c++"<<endl;
     cout << "\n--- Menú Principal ---" << endl;
@@ -49,6 +49,7 @@ int main() {
                 break;
             case 2:
                 cout<<"le avisaste a la chica que se le cayó su monedero y ella está muy agradecida contigo"<<endl<<"felicidades ahora tienes novia y parece que son tal para cual"<<endl;
+                novia = 1;
                 break;
             case 3:
     
@@ -122,17 +123,22 @@ int main() {
             cout << "Dinero: " << dinero << endl; 
             cout << "\n--- Menú de Interacción ---" << endl;
             cout << "1. ayudarlo" << endl;
-            cout << "2. " << endl;
+            cout << "2. lo siento pero prefiero estudiar solo " << endl;
             cout << "3. ignorarlo " << endl;
             cout << "\nElige una opción: ";
+            cin>>opcion;
         }while(opcion<1||opcion>3);
         switch (opcion)
         {
         case 1:
             cout<<"tu y tu amigo emmanuel estudiaron mucho, seguro los dos pasaran sus examenes y siguen siendo muy buenos amigos"<<endl;
-        
             break;
-        
+        case 2:
+            cout<<"tu amigo te dice que no hay problema el va a la biblioteca a estudiar"<<endl;
+            break;
+        case 3:
+        cout<<"qué te pasa, se supone que eran buenos amigos, ¿por qué fuiste tan grosero?"<<endl;
+        break;
 
         }
         do{//decision 4
@@ -145,8 +151,9 @@ int main() {
             cout << "\n--- Menú de Interacción ---" << endl;
             cout << "1. contestarlo " << endl;
             cout << "2. copiarle a Emmanuel que está al lado tuyo" << endl;
-            cout << "3. " << endl;
+            cout << "3. dejar dinero en el examen -$5000" << endl;
             cout << "\nElige una opción: ";
+            cin>>opcion;
             if (opcion < 1 || opcion > 3){
                 cout<<"ingresa un numero del 1 al 3"<<endl;
             }
@@ -156,14 +163,58 @@ int main() {
         case 1:
             cout<<"lo hiciste muy bien el profesor candelario está orgulloso de ti y te invito a comer una picza otro día bien hecho"<<endl;
             break;
-        
-        default:
+        case 2: 
+            cout<<"el profesor que descubrió copiando, tendrás que hacer el extra, a la proxima no hagas trampa"<<endl;
             break;
+        case 3:
+            cout<<"sacaste el mejor promedio de tu generación, nadie mas pudo alcanzar tu nota, todos se preguntan ¿como lo habrás hecho? "<<endl;
+            dinero -= 5000;
+            break;
+
         }
 
-       
+        do{//desicion 5 final
+            cout<<"tu ultimo dia de clases terminó, ¿cómo terminaras este hermoso semestre?"<<endl;
+            cout << "\n--- Economía ---" << endl;
+            cout << "Dinero: " << dinero << endl; 
+            cout << "\n--- Menú de Interacción ---" << endl;
+            cout << "1. regresar a casa tranquilo " << endl;
+            cout << "2. salir con tu novia" << endl;
+            cout << "3. salir de fiesta con tus amigos" << endl;
+            cout << "\nElige una opción: ";
+            cin>>opcion;
+            if (opcion < 1 || opcion > 3){
+                cout<<"ingresa un numero del 1 al 3"<<endl;
+            }
+            if(opcion == 2)
+            {
+                if (novia == 0)
+                {
+                    cout<<" no tienes novia bro, eres ingeniero en computación, buen inteto"<<endl;
+                    opcion = 9;
+                }
+                
+            }
+        }while(opcion<1||opcion>3);
+        switch (opcion)
+        {
+        case 1:
+            cout<<"regresas a casa tranquilo y nostalgico, vas a extrañar todo lo que viviste en tu carrera, fue una buena etapa"<<endl<<"GOOD ENDING, CRONGRATULATIONS" <<endl;
+            break;
+        case 2:
+            if(novia == 1)
+            {
+                cout<<"tu y tu novia son muy felices que bueno que la vida los juntó,son tal para cual"<<endl;
+
+            }
+            break;
+        case 3:
+            cout<<"pero que buen día, algunos de tus amigos reprobaron otros panzaron, pero este momento vale la pena para ustedes, que buena fiesta"<<endl;
+
         
-            
+        }
+        cout<<endl<<endl<<"Este es el final del juego, ojalá te haya gustado"<<endl;
+        break;    
     }
     return 0;
 }
