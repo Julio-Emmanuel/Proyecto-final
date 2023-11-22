@@ -5,23 +5,39 @@ int main() {
     int opcion;
     int dinero = 0; //variable para el dinero del usuario
     int novia = 0; //variable para final alternativo con novia
-
     cout<<"bienvenido a mi juego de decisiones en c++"<<endl;
+    do{
+    
+    cout<<"Ya casi es hora de que vayas a la escuela, ¿qué deseas hacer?"<<endl;
     cout << "\n--- Menú Principal ---" << endl;
-    cout << "1. iniciar a jugar" << endl;
-    cout << "2. dinero infinito" << endl;
-    cout << "3. easter egg" << endl;
-    cout << "4. ir al final" << endl;
+    cout << "1. ir a la escuela" << endl;
+    cout << "2. tomar dinero y luego ir a la escuela" << endl;
+    cout << "3. Cambiarte de ropa" << endl;
+    cout << "4. Esperar un rato más" << endl;
     cout << "5. cerrar el juego" << endl;
     cout << "\nElige una opción: ";
     cin>>opcion;
+   if (opcion == 5)
+   {
+    return 0;
+   }
+   if(opcion == 4)
+   {
+    cout<<"ya esperaste un poco ahora ¿qué quieres hacer?"<<endl;
+    opcion = 9;
+   }
+   if(opcion == 3)
+   {
+    cout<<"ya te cambiaste de ropa, ahora ¿qué quieres hacer?"<<endl;
+    opcion = 9;
+   }
     if (opcion == 2)
     {
         dinero = 9999;
         cout<<"felicidades ahora tienes dinero infinito, ahora puedes comenzar a jugar"<<endl;
         opcion = 1;
     }
-    
+    }while(opcion<1 || opcion >5);   
     switch(opcion){
         case 1:
 
